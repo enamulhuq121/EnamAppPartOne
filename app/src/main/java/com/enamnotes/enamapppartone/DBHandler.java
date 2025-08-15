@@ -1,7 +1,5 @@
 package com.enamnotes.enamapppartone;
 
-import static androidx.constraintlayout.helper.widget.MotionEffect.TAG;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,22 +10,14 @@ import java.io.File;
 
 public class DBHandler extends SQLiteOpenHelper {
 
-    private static final String DB_NAME="participantdb";
+    private static final String TAG = "DBHandler";
     private static final int DB_VERSION=3;
     private static final String TABLE_NAME="participantlist";
     private static final String ID_COL="id";
     private static final String NAME_COL="name";
 
-    /*public DBHandler(Context context){
-
-        super(context, DB_NAME,null,DB_VERSION);
-
-    }*/
-
     public DBHandler(Context context){
-
         super(context, getCustomDatabasePath(context),null,DB_VERSION);
-
     }
 
     private static String getCustomDatabasePath(Context context) {
@@ -51,11 +41,7 @@ public class DBHandler extends SQLiteOpenHelper {
 
     }
 
-    // Now creating a method to save data to database
-
     public void addNewParticipant(String participantName){
-
-
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
@@ -63,8 +49,6 @@ public class DBHandler extends SQLiteOpenHelper {
         db.insert(TABLE_NAME, null, values);
 
         db.close();
-
-
     }
 
 
