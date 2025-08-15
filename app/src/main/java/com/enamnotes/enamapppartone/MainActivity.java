@@ -34,7 +34,6 @@ public class MainActivity extends AppCompatActivity {
 
                 String participantName= participantNameEdit.getText().toString();
 
-                // dbHandler.addNewParticipant(participantName);
                 if(participantName.isEmpty()){
                     Toast.makeText(MainActivity.this,"Please enter data", Toast.LENGTH_SHORT).show();
                     return;
