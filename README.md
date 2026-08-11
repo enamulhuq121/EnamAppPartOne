@@ -1,20 +1,18 @@
-Updated as 22022025
-Extra code to read data from internal storage-
+## License
 
-Before this mechanism -
-/*public DBHandler(Context context){
-        super(context, DB_NAME,null,DB_VERSION);
-    }*/
+This project is licensed under the **[PolyForm Noncommercial License 1.0.0](LICENSE)**.
 
+**You CAN:**
+- Use this code for personal learning and study
+- Use it for educational, research, or hobby projects
+- Modify it and build on it for any noncommercial purpose
 
-After this mechanism -
-    public DBHandler(Context context){
-        super(context, getCustomDatabasePath(context),null,DB_VERSION);
-    }
+**You CANNOT:**
+- Use this code (in original or modified form) for any commercial purpose
+- Sell products or services built on this code
+- Use it inside a for-profit product without permission
 
-private static String getCustomDatabasePath(Context context) {
-        File directory = context.getExternalFilesDir(null);
-        String customDbPath = directory.getAbsolutePath() + "/participantdatabase.db";
-        Log.d(TAG, "Custom Database Path: " + customDbPath);
-        return customDbPath;
-    }
+**Want to use this commercially?**
+Contact me for a commercial license: **[md.enamul19@gmail.com]**
+
+Copyright (c) 2026 Mohammad Enamul Huq. All rights reserved.
